@@ -1,0 +1,65 @@
+
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  align-items: top;
+  justify-content: top;
+  font-size: calc(10px + 2vmin);
+
+}
+
+
+.set-background {
+  background-color: rgb(145, 145, 255);
+}
+
+.todo-title {
+  margin-left: 20px;
+  margin-left: 10px;
+  margin-top: 10px;
+  font-style: underline bold;
+  font-family: fantasy;
+  color: rgb(255, 255, 255);
+  border: solid;
+  width: fit-content;
+  
+  
+  
+
+}
+
+
+.todo-items {
+  margin-left: 10px;
+  margin-top: 10px;
+  font-family: fantasy;
+  font-size: large;
+  color: rgb(0, 187, 255);
+  
+  
+}
+
+
+.strikeThrough {
+  text-decoration: line-through;
+  font-style: italic, bold;
+  color: rgb(255, 113, 113);
+  margin-left: 18%;
+  font-family: fantasy;
+  font-style: oblique;
+  
+
+
+}
+
+.nice-label {
+  margin-right: 10px;
+  margin-left: 10px;
+  font-style: oblique;
+  font-family: fantasy;
+  color: rgb(0, 187, 255)
+}
+
+
+
