@@ -1,70 +1,76 @@
-# Getting Started with Create React App
+**Task: Todo List** 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+**File in src/App.js**
 
-In the project directory, you can run:
 
-### `npm start`
+Define Goals: 
+- SELF IMPOSED ONE WEEK DEADLINES (SHOOT FOR COMPLETION BY MAY 12)
+- Add to todo list via a textbox
+- Remove from todo list
+- Task should be crossed out / appear visually altered to signify completion
+- Task should move to bottom of todo list
+- If time allows, set up firebase
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Research (These are the sources that I drew from directly):
+- Setup: 
+   - Install npm: https://nodejs.org/en/download/
+   - React setup: https://reactjs.org/docs/create-a-new-react-app.html
+Tutorials: 
+- React JS Tutorial: https://www.youtube.com/watch?v=Ke90Tje7VS0&t=4728s
+- Getting to know react: https://reactjs.org/tutorial/tutorial.html
+- React JS Todo List Tutorial: https://www.youtube.com/watch?v=k195rHv8N-0
+- This one was really bad, and hardly used any of the ideas here. I just needed a baseline upon which I could organize in my head how I was going to accomplish this task
+- Mapping: https://reactjs.org/docs/lists-and-keys.html
+- Commenting: https://stackoverflow.com/questions/30766441/how-to-use-comments-in-react
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Bootstrap: https://getbootstrap.com/docs/4.1/getting-started/download/
+- Buttons: https://www.codegrepper.com/code-examples/css/bootstrap+4+labels
+- Styling: https://getbootstrap.com/docs/4.0/getting-started/theming/
+CSS: Figured this out mostly by trial and error. Most things are pretty self-explanatory, however deeper research is needed to learn how to take advantage of CSS entirely.
+- Toggling styles: https://devdojo.com/krissanawat101/3-ways-for-toggle-a-class-in-react
+- Fitting a border around text: https://stackoverflow.com/questions/4689481/have-border-wrap-around-text
 
-### `npm test`
+**Plan A**
+Implement a Task Component:
+- A remove button
+- Remove button initiates a remove sequence that pushes the task to bottom of array
+- Restyle to appear crossed out
+- Displays name and task number gathered by user input
+Main App
+- Construct states for
+- todoList array
+- item
+- Implement an input box, set item to user’s input, make it the name of a new Task object
+- Calculate task # based on array index, make it the task # of the Task object
+- Use map to display each task object on screen in a column
+**Challenges:** 
+- Successfully implementing a component 
+- Altering state of component
+- Implementing a remove button that achieved desired functionality
+**Successes:**
+- Can gather user input and add to array
+- Display this array in a column
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+**Plan B - THIS WAS MY FINAL DESIGN. TODO LIST v1**
+- Make main app that is also a component to get component functionality
+- Have a column for active tasks and completed tasks
+- Construct state of 
+    - Item - the item to be gathered from user input
+    - toDoList - stores each item
+- Allow user to input task, set equal to item with an input handler
+- Click a button that updates toDoList with the name of the item inputted by user
+- When task is clicked, toggle strikeThrough styling that crosses out the task and moves it into a completed column
+ **Assessing Successes / Fails - **
+- Was unable to figure out how to make desired manipulations to the array
+- Was unable to create a component that displays task and remove button as planned
+- Nonetheless, created a functional todo list that makes sense for the user
+- REALLY ENJOYED PLAYING AROUND WITH CSS!
+- New way to be creative
+- Started to develop a programming mindset for react – my ability to problem solve in this language still requires much more practice/improvement
+- Forced me to think differently about coding
+      - Experience up to this point was mainly in algorithms/using data structures efficiently
+- Could not set up firebase - I got close, but a slew of midterms/assignments got in the way. Certainly “figure-outable”, just needed some more time. 
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
